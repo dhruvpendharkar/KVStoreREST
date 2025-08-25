@@ -60,7 +60,7 @@ This is a Flask-based REST API for a key-value store with support for transactio
    ```json
    {"error": "Key not found"}
    ```
-3. Delete a key (Delete /get):
+3. Delete a key (DELETE /delete):
    ```bash
    curl -X DELETE http://127.0.0.1:5000/delete/name
    ```
@@ -72,6 +72,46 @@ This is a Flask-based REST API for a key-value store with support for transactio
    ```json
    {"error": "Key not found"}
    ```
+4. Begin a transaction (POST /begin):
+   ```bash
+   curl -X POST http://127.0.0.1:5000/begin
+   ```
+   Response (200):
+   ```json
+   {"status": "transaction started"}
+   ```
+5. Rollback a transaction (POST /rollback):
+   ```bash
+   curl -X POST http://127.0.0.1:5000/rollback
+   ```
+   Response (200):
+   ```json
+   {"status": "transaction rolled back"}
+   ```
+   Error (400):
+   ```json
+   {"error": "No transaction to rollback"}
+   ```
+6. Commit a transaction (POST /commit):
+   ```bash
+   curl -X POST http://127.0.0.1:5000/commit
+   ```
+   Response (200):
+   ```json
+   {"status": "transaction committed"}
+   ```
+   Error (400):
+   ```json
+   {"error": "No transaction to commit"}
+   ```
+
+## Running Tests
+
+For running the suite of tests use pytest. The included tests cover the KVStore API, the REST API layer built with Flask, and concurrency tests.
+
+
+
+   
    
 
    
