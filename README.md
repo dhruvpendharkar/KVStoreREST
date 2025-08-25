@@ -35,12 +35,45 @@ This is a Flask-based REST API for a key-value store with support for transactio
 ## API Endpoints
 
 1. Set a Key-Value Pair (POST /set):
-  Request Body:
+   ```bash
+   curl -X POST http://127.0.0.1:5000/set \
+     -H "Content-Type: application/json" \
+     -d '{"key": "name", "value": "Alice"}'
+   ```
+   Response (200):
    ```json
-   {
-  "key": "username",
-  "value": "dhruv"
-   }
+   {"status": "ok"}
+   ```
+   Error (404):
+   ```json
+   {"error": "Key and value are required"}
+   ```
+2. Get a key (GET /get):
+   ```bash
+   curl -X GET http://127.0.0.1:5000/get/name
+   ```
+   Response (200):
+   ```json
+   {"key": "name", "value": "Alice"}
+   ```
+   Error (404):
+   ```json
+   {"error": "Key not found"}
+   ```
+3. Delete a key (Delete /get):
+   ```bash
+   curl -X DELETE http://127.0.0.1:5000/delete/name
+   ```
+   Response (200):
+   ```json
+   {"status": "deleted"}
+   ```
+   Error (404):
+   ```json
+   {"error": "Key not found"}
+   ```
+   
+
    
 
 
