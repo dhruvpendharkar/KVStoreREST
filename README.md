@@ -21,10 +21,11 @@ This is a Flask-based REST API for a key-value store with support for transactio
    ```bash
    python -m venv .venv
    source .venv/bin/activate
-
 3. Install dependencies:
   ```bash
    pip install -r requirements.txt
+   #Note that some dependencies in requirements.txt are for tests
+
 
 
    
