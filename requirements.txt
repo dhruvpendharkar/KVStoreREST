@@ -1,0 +1,4 @@
+flask[async]
+flask_sqlalchemy
+pytest
+pytest-asyncio
