@@ -30,10 +30,19 @@ This is a Flask-based REST API for a key-value store with support for transactio
 1. Start Flask Server:
    ```bash
    python app.py
+   #The server runs by default at http://127.0.0.1:5000
 
-The server will be running by default at:
-   ```cpp
-   http://127.0.0.1:5000
+## API Endpoints
+
+1. Set a Key-Value Pair (POST /set):
+  Request Body:
+   ```json
+   {
+  "key": "username",
+  "value": "dhruv"
+   }
+   
+
 
 
 
