@@ -5,7 +5,7 @@ This is a Flask-based REST API for a key-value store with support for transactio
 ## Prerequisites
 
 - Python 3.7+
-- Flask (fl)
+- Flask
 - Flask-SQLAlchemy
 - pytest (tests only)
 - pytest-asyncio (tests only)
@@ -17,7 +17,7 @@ This is a Flask-based REST API for a key-value store with support for transactio
    git clone <https://github.com/dhruvpendharkar/KVStoreREST>
    cd KVStoreREST
 
-2. Creeate and activate a virtual environment (recommended):
+2. Create and activate a virtual environment (recommended):
    ```bash
    python -m venv .venv
    source .venv/bin/activate
@@ -108,6 +108,12 @@ This is a Flask-based REST API for a key-value store with support for transactio
 ## Running Tests
 
 For running the suite of tests use pytest. The included tests cover the KVStore API, the REST API layer built with Flask, and concurrency tests.
+
+## License
+MIT License
+
+## Author
+Dhruv Pendharkar
 
 
 
