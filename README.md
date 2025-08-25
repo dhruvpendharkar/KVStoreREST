@@ -32,7 +32,7 @@ This is a Flask-based REST API for a key-value store with support for transactio
    python app.py
 
 The server will be running by default at:
-   ```bash
+   ```cpp
    http://127.0.0.1:5000
 
 
