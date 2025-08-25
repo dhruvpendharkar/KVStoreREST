@@ -22,9 +22,19 @@ This is a Flask-based REST API for a key-value store with support for transactio
    python -m venv .venv
    source .venv/bin/activate
 3. Install dependencies:
-  ```bash
+   ```bash
    pip install -r requirements.txt
-   #Note that some dependencies in requirements.txt are for tests
+
+## Running the API
+
+1. Start Flask Server:
+   ```bash
+   python app.py
+
+The server will be running by default at:
+   ```bash
+   http://127.0.0.1:5000
+
 
 
 
